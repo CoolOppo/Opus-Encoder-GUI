@@ -33,7 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.bitrateAdjuster = new System.Windows.Forms.NumericUpDown();
             this.convertButton = new System.Windows.Forms.Button();
-            this.process1 = new System.Diagnostics.Process();
+            this.opusencProcess = new System.Diagnostics.Process();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.bitrateAdjuster)).BeginInit();
             this.SuspendLayout();
@@ -99,20 +99,22 @@
             this.convertButton.UseVisualStyleBackColor = true;
             this.convertButton.Click += new System.EventHandler(this.convertButton_Click);
             // 
-            // process1
+            // opusencProcess
             // 
-            this.process1.EnableRaisingEvents = true;
-            this.process1.StartInfo.Domain = "";
-            this.process1.StartInfo.ErrorDialog = true;
-            this.process1.StartInfo.FileName = "opus-tools-0.1.8\\opusenc.exe";
-            this.process1.StartInfo.LoadUserProfile = false;
-            this.process1.StartInfo.Password = null;
-            this.process1.StartInfo.StandardErrorEncoding = null;
-            this.process1.StartInfo.StandardOutputEncoding = null;
-            this.process1.StartInfo.UserName = "";
-            this.process1.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-            this.process1.SynchronizingObject = this;
-            this.process1.Exited += new System.EventHandler(this.process1_Exited);
+            this.opusencProcess.EnableRaisingEvents = true;
+            this.opusencProcess.StartInfo.CreateNoWindow = true;
+            this.opusencProcess.StartInfo.Domain = "";
+            this.opusencProcess.StartInfo.ErrorDialog = true;
+            this.opusencProcess.StartInfo.FileName = "opus-tools-0.1.8\\opusenc.exe";
+            this.opusencProcess.StartInfo.LoadUserProfile = false;
+            this.opusencProcess.StartInfo.Password = null;
+            this.opusencProcess.StartInfo.StandardErrorEncoding = null;
+            this.opusencProcess.StartInfo.StandardOutputEncoding = null;
+            this.opusencProcess.StartInfo.UserName = "";
+            this.opusencProcess.StartInfo.UseShellExecute = false;
+            this.opusencProcess.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            this.opusencProcess.SynchronizingObject = this;
+            this.opusencProcess.Exited += new System.EventHandler(this.process1_Exited);
             // 
             // openFileDialog1
             // 
@@ -148,7 +150,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown bitrateAdjuster;
         private System.Windows.Forms.Button convertButton;
-        private System.Diagnostics.Process process1;
+        private System.Diagnostics.Process opusencProcess;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
