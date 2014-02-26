@@ -49,6 +49,9 @@
     <WarningLevel>1</WarningLevel>
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Opus-Icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -102,6 +105,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Opus-Icon.ico" />
     <Content Include="opus-tools-0.1.8\COPYING.txt" />
     <Content Include="opus-tools-0.1.8\opusenc.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
