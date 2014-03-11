@@ -1,11 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Opus_Encoder_GUI
 {
-    public partial class convertingDialog : Form
+    public partial class ConvertingDialog : Form
     {
-        public convertingDialog()
+        public ConvertingDialog()
         {
             InitializeComponent();
         }

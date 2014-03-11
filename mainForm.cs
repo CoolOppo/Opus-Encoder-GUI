@@ -5,11 +5,10 @@ namespace Opus_Encoder_GUI
 {
     public partial class mainForm : Form
     {
-        Form objConvertingDialog = new convertingDialog();
+        public ConvertingDialog objConvertingDialog = new ConvertingDialog();
         public mainForm()
         {
             InitializeComponent();
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -24,22 +23,20 @@ namespace Opus_Encoder_GUI
 
         private void convertButton_Click(object sender, EventArgs e)
         {
-            string space = " ";
+            startConverting();
+        }
+        void startConverting()
+        {
+            
+            string space = @" ";
             string doubleQuote = @"""";
-            opusencProcess.StartInfo.Arguments = "--bitrate" + space + bitrateAdjuster.Value.ToString() + space + doubleQuote + openFileDialog1.FileName + doubleQuote + space + doubleQuote + openFileDialog1.FileName + ".opus" + doubleQuote; // Somebody fix this mess
-
-            convertButton.Enabled = false;
-            this.UseWaitCursor = true;
-            objConvertingDialog.Show();
-
+            opusencProcess.StartInfo.Arguments = /*"--bitrate" + space + bitrateAdjuster.Value.ToString() + space + */doubleQuote + openFileDialog1.FileName + doubleQuote + space + doubleQuote + openFileDialog1.FileName + ".opus" + doubleQuote; // Somebody fix this mess
+            objConvertingDialog.ShowDialog(this);
             opusencProcess.Start();
         }
-
         private void process1_Exited(object sender, EventArgs e)
         {
             objConvertingDialog.Hide();
-            this.UseWaitCursor = false;
-            MessageBox.Show("Converting finished!");
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

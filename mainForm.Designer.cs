@@ -61,6 +61,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Enabled = false;
             this.label1.Location = new System.Drawing.Point(92, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
@@ -69,6 +70,7 @@
             // 
             // bitrateAdjuster
             // 
+            this.bitrateAdjuster.Enabled = false;
             this.bitrateAdjuster.Location = new System.Drawing.Point(53, 51);
             this.bitrateAdjuster.Maximum = new decimal(new int[] {
             256,
@@ -127,7 +129,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(234, 111);
+            this.ClientSize = new System.Drawing.Size(234, 105);
             this.Controls.Add(this.convertButton);
             this.Controls.Add(this.bitrateAdjuster);
             this.Controls.Add(this.label1);
