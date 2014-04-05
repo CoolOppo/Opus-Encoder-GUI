@@ -1,6 +1,6 @@
 ﻿namespace Opus_Encoder_GUI
 {
-    partial class mainForm
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -70,7 +70,6 @@
             // 
             // bitrateAdjuster
             // 
-            this.bitrateAdjuster.Enabled = false;
             this.bitrateAdjuster.Location = new System.Drawing.Point(53, 51);
             this.bitrateAdjuster.Maximum = new decimal(new int[] {
             256,
@@ -125,7 +124,7 @@
             this.openFileDialog1.Filter = "Audio Files (*.wav, *.aiff, *.flac, *.ogg)|*.wav;*.aiff;*.flac;*.ogg";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
-            // mainForm
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -138,7 +137,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "mainForm";
+            this.Name = "MainForm";
             this.Text = "Opus Encoder";
             this.Load += new System.EventHandler(this.mainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bitrateAdjuster)).EndInit();
